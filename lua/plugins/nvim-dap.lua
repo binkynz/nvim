@@ -33,12 +33,26 @@ return {
             cmd = { "DapInstall", "DapUninstall" },
             opts = {
                 automatic_installation = true,
-                handlers = {},
                 ensure_installed = {
                     "delve",
                 },
             },
         },
+        {
+            "leoluz/nvim-dap-go",
+            keys = {
+                { "<leader>dt",  function() require("dap-go").debug_test() end,      desc = "Debug test" },
+                { "<leader>dtl", function() require("dap-go").debug_last_test() end, desc = "Debug last test" },
+            },
+            config = function()
+                require('dap-go').setup({
+                    delve = {
+                        initialize_timeout_sec = 20,
+                        port = "${port}",
+                    },
+                })
+            end
+        }
     },
     keys = {
         { "<leader>dc", function() require("dap").continue() end,          desc = "Continue" },
