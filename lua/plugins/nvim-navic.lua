@@ -1,0 +1,42 @@
+return {
+    "SmiteshP/nvim-navic",
+
+    dependencies = {
+        "neovim/nvim-lspconfig",
+    },
+
+    config = function()
+        require("nvim-navic").setup({
+            lsp = { auto_attach = true },
+            seperator = " ",
+            icons = {
+                File          = "file:",
+                Module        = "module:",
+                Namespace     = "namespace:",
+                Package       = "package:",
+                Class         = "class:",
+                Method        = "method:",
+                Property      = "property:",
+                Field         = "field:",
+                Constructor   = "ctor:",
+                Enum          = "enum:",
+                Interface     = "iface:",
+                Function      = "fn:",
+                Variable      = "var:",
+                Constant      = "const:",
+                String        = "str:",
+                Number        = "num:",
+                Boolean       = "bool:",
+                Array         = "array:",
+                Object        = "obj:",
+                Key           = "key:",
+                Null          = "null:",
+                EnumMember    = "enum-member:",
+                Struct        = "struct:",
+                Event         = "event:",
+                Operator      = "operator:",
+                TypeParameter = "type-parameter:",
+            },
+        })
+    end,
+}
