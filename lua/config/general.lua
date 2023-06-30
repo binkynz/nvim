@@ -5,8 +5,8 @@ opt.relativenumber = true
 opt.number = true
 
 -- tabs and indentation
-opt.tabstop = 4
-opt.shiftwidth = 4
+opt.tabstop = 2
+opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
@@ -36,3 +36,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+opt.scrolloff = 16
+opt.swapfile = false
+opt.undofile = true
