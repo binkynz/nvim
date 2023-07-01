@@ -1,23 +1,22 @@
 return {
-    "jay-babu/mason-null-ls.nvim",
+	"jay-babu/mason-null-ls.nvim",
 
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-        "williamboman/mason.nvim",
-        "jose-elias-alvarez/null-ls.nvim",
-    },
+	event = { "BufReadPre", "BufNewFile" },
 
-    config = function()
-        require("mason-null-ls").setup({
-            ensure_installed = {
-                "prettier",
-                "stylua",
-                "autopep8",
-                "gofumpt",
-                "goimports",
-            },
+	dependencies = {
+		"williamboman/mason.nvim",
+		"jose-elias-alvarez/null-ls.nvim",
+	},
 
-            automatic_installation = true,
-        })
-    end,
+	opts = {
+		ensure_installed = {
+			"prettier",
+			"stylua",
+			"autopep8",
+			"gofumpt",
+			"goimports",
+		},
+
+		automatic_installation = true,
+	},
 }

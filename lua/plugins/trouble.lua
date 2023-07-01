@@ -2,6 +2,7 @@ return {
 	"folke/trouble.nvim",
 
 	cmd = { "TroubleToggle", "Trouble" },
+
 	opts = {
 		icons = false,
 		fold_open = "v",
@@ -17,6 +18,7 @@ return {
 		auto_close = true,
 		auto_preview = false,
 	},
+
 	keys = {
 		{ "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document Diagnostics (Trouble)" },
 		{ "<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Workspace Diagnostics (Trouble)" },

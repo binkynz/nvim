@@ -1,9 +1,7 @@
 return {
-    "echasnovski/mini.pairs",
+	"echasnovski/mini.pairs",
 
-    event = "VeryLazy",
+	event = "VeryLazy",
 
-    config = function()
-        require("mini.pairs").setup()
-    end
+	opts = {},
 }
