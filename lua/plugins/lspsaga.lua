@@ -1,6 +1,8 @@
 return {
 	"glepnir/lspsaga.nvim",
 
+	event = { "BufReadPre", "BufNewFile" },
+
 	opts = {
 		-- use enter to open file with definition preview
 		definition = {
