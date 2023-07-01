@@ -6,6 +6,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		{ "nvim-telescope/telescope-file-browser.nvim" },
 	},
 
 	keys = {
@@ -13,6 +14,7 @@ return {
 		{ "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "Find string in current working directory" },
 		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "List help tags" },
 		{ "<leader>ds", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Finds all dynamic symbols" },
+		{ "<leader>fb", "<cmd>Telescope file_browser<cr>", desc = "File Browser" }, -- https://github.com/nvim-telescope/telescope-file-browser.nvim#mappings
 	},
 
 	opts = {},
@@ -21,5 +23,6 @@ return {
 		local telescope = require("telescope")
 		telescope.setup(opts)
 		telescope.load_extension("fzf")
+		telescope.load_extension("file_browser")
 	end,
 }

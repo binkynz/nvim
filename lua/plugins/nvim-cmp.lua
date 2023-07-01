@@ -14,35 +14,6 @@ return {
 	config = function()
 		local cmp = require("cmp")
 
-		local icons = {
-			Text = "text",
-			Method = "method",
-			Function = "fn",
-			Constructor = "ctor",
-			Field = "field",
-			Variable = "var",
-			Class = "class",
-			Interface = "iface",
-			Module = "module",
-			Property = "property",
-			Unit = "unit",
-			Value = "val",
-			Enum = "enum",
-			Keyword = "keyword",
-			Snippet = "snippet",
-			Color = "color",
-			File = "file",
-			Reference = "ref",
-			Folder = "folder",
-			EnumMember = "enum-member",
-			Constant = "const",
-			Struct = "struct",
-			Event = "event",
-			Operator = "operator",
-			TypeParameter = "type-parameter",
-			Copilot = "copilot",
-		}
-
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,noinsert",
