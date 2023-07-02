@@ -12,10 +12,10 @@ return {
 	},
 
 	keys = {
-		{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files in current working directory" },
+		{ "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find files in current working directory" },
 		{ "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "Find string in current working directory" },
 		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "List help tags" },
-		{ "<leader>fb", "<cmd>Telescope file_browser<cr>", desc = "File Browser" }, -- https://github.com/nvim-telescope/telescope-file-browser.nvim#mappings
+		{ "<leader>fb", "<cmd>Telescope file_browser hidden=true<cr>", desc = "File Browser" }, -- https://github.com/nvim-telescope/telescope-file-browser.nvim#mappings
 		{ "<leader>fd", "<cmd>Telescope aerial<cr>", desc = "Aerial document symbols" },
 	},
 
