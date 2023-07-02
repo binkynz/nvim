@@ -12,7 +12,7 @@ return {
 			enable = false,
 		},
 		lightbulb = {
-			enable = true,
+			enable = false,
 		},
 	},
 }

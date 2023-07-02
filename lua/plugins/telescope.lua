@@ -8,6 +8,7 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-telescope/telescope-file-browser.nvim",
 		{ "stevearc/aerial.nvim", opts = {} },
+		"nvim-telescope/telescope-ui-select.nvim",
 	},
 
 	keys = {
@@ -18,13 +19,29 @@ return {
 		{ "<leader>fd", "<cmd>Telescope aerial<cr>", desc = "Aerial document symbols" },
 	},
 
-	opts = {},
+	opts = {
+		pickers = {
+			["find_files"] = {
+				theme = "ivy",
+			},
+		},
+		extensions = {
+			["file_browser"] = {
+				theme = "ivy",
+			},
+		},
+	},
 
 	config = function(_, opts)
 		local telescope = require("telescope")
+		-- has to be set this way for ui-select unfortunately
+		opts.extensions["ui-select"] = {
+			require("telescope.themes").get_cursor({}),
+		}
 		telescope.setup(opts)
 		telescope.load_extension("fzf")
 		telescope.load_extension("file_browser")
 		telescope.load_extension("aerial")
+		telescope.load_extension("ui-select")
 	end,
 }
