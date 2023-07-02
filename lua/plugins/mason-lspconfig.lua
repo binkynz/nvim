@@ -7,6 +7,7 @@ return {
 			"gopls",
 			"graphql",
 			"pylsp",
+			"tsserver",
 		},
 
 		automatic_installation = true,

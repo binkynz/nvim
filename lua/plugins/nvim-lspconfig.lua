@@ -7,27 +7,6 @@ return {
 		"mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"hrsh7th/cmp-nvim-lsp",
-		{
-			"SmiteshP/nvim-navbuddy",
-			dependencies = {
-				"SmiteshP/nvim-navic",
-				"MunifTanjim/nui.nvim",
-			},
-		},
-		{
-			"someone-stole-my-name/yaml-companion.nvim",
-			requires = {
-				{ "neovim/nvim-lspconfig" },
-				{ "nvim-lua/plenary.nvim" },
-				{ "nvim-telescope/telescope.nvim" },
-			},
-			keys = {
-				{ "<leader>z", "<cmd>Telescope yaml_schema<cr>", desc = "Set the yaml schema" },
-			},
-			config = function()
-				require("telescope").load_extension("yaml_schema")
-			end,
-		},
 	},
 
 	config = function()
@@ -116,7 +95,5 @@ return {
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
-
-		lspconfig.yamlls.setup(require("yaml-companion").setup({}))
 	end,
 }
