@@ -27,8 +27,10 @@ keymap.set("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
 
 -- indent
-keymap.set("n", "<leader><Tab>", ">>", opts) -- indent right
-keymap.set("n", "<leader><S-Tab>", "<<", opts) -- indent left
+keymap.set("n", "<leader><Tab>", ">>", opts)
+keymap.set("n", "<leader><S-Tab>", "<<", opts)
+keymap.set("v", "<leader><Tab>", ">gv", opts)
+keymap.set("v", "<leader><S-Tab>", "<gv", opts)
 
 -- diagnostic keymaps
 vim.api.nvim_set_keymap("n", "<leader>do", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)

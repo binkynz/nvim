@@ -1,11 +1,11 @@
 return {
-	"folke/tokyonight.nvim",
+	"Mofiqul/vscode.nvim",
 	lazy = false,
 	priority = 1000,
 	opts = {},
 	config = function(_, opts)
-		local tokyonight = require("tokyonight")
-		tokyonight.setup(opts)
-		tokyonight.load()
+		local vscode = require("vscode")
+		vscode.setup(opts)
+		vscode.load()
 	end,
 }
