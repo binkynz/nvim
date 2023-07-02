@@ -33,7 +33,7 @@ keymap.set("v", "<leader><Tab>", ">gv", opts)
 keymap.set("v", "<leader><S-Tab>", "<gv", opts)
 
 -- diagnostic keymaps
-vim.api.nvim_set_keymap("n", "<leader>do", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>d[", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>d]", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>", opts)
+keymap.set("n", "<leader>do", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+keymap.set("n", "<leader>d[", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+keymap.set("n", "<leader>d]", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+keymap.set("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>", opts)

@@ -34,6 +34,12 @@ return {
 			keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 			keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 
+			-- diagnostic keymaps
+			vim.api.nvim_set_keymap("n", "<leader>do", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+			vim.api.nvim_set_keymap("n", "<leader>d[", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+			vim.api.nvim_set_keymap("n", "<leader>d]", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+			vim.api.nvim_set_keymap("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>", opts)
+
 			if client.name == "gopls" and not client.server_capabilities.semanticTokensProvider then
 				local semantic = client.config.capabilities.textDocument.semanticTokens
 				client.server_capabilities.semanticTokensProvider = {

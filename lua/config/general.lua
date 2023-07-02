@@ -1,5 +1,8 @@
 local opt = vim.opt
 
+-- remove the mouse
+opt.mouse = ""
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true
@@ -35,8 +38,12 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- include hyphen in word
 opt.iskeyword:append("-")
 
+-- prevent cursor from going into the gutter
 opt.scrolloff = 16
+
+-- remove swapfiles
 opt.swapfile = false
 opt.undofile = true
