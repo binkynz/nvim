@@ -17,6 +17,7 @@ return {
 		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "List help tags" },
 		{ "<leader>fb", "<cmd>Telescope file_browser hidden=true<cr>", desc = "File Browser" }, -- https://github.com/nvim-telescope/telescope-file-browser.nvim#mappings
 		{ "<leader>fd", "<cmd>Telescope aerial<cr>", desc = "Aerial document symbols" },
+		{ "<leader>dd", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics" },
 	},
 
 	opts = {

@@ -3,6 +3,12 @@ vim.g.mapleader = " " -- set leader key to space
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- remove the arrow keys to force myself to use hjkl
+keymap.set({ "n", "v", "i" }, "<up>", "<Nop>", opts)
+keymap.set({ "n", "v", "i" }, "<down>", "<Nop>", opts)
+keymap.set({ "n", "v", "i" }, "<left>", "<Nop>", opts)
+keymap.set({ "n", "v", "i" }, "<right>", "<Nop>", opts)
+
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", opts)
 
@@ -31,9 +37,3 @@ keymap.set("n", "<leader><Tab>", ">>", opts)
 keymap.set("n", "<leader><S-Tab>", "<<", opts)
 keymap.set("v", "<leader><Tab>", ">gv", opts)
 keymap.set("v", "<leader><S-Tab>", "<gv", opts)
-
--- diagnostic keymaps
-keymap.set("n", "<leader>do", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-keymap.set("n", "<leader>d[", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-keymap.set("n", "<leader>d]", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-keymap.set("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>", opts)
