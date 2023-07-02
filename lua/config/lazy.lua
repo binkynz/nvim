@@ -15,9 +15,7 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup("plugins", {
 	install = { colorscheme = { "vscode" } },
 	defaults = { lazy = true },
-	ui = {
-		border = "rounded",
-	},
+	ui = { border = "rounded" },
 	checker = { enabled = true },
 	debug = false,
 })

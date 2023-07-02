@@ -3,11 +3,10 @@ return {
 
 	build = ":TSUpdate",
 	event = { "BufReadPost", "BufNewFile" },
+	cmd = { "TSUpdateSync" },
 
 	opts = {
-		highlight = {
-			enable = true,
-		},
+		highlight = { enable = true },
 		indent = { enable = true },
 		autotag = { enable = true },
 		ensure_installed = {
@@ -26,4 +25,8 @@ return {
 		},
 		auto_install = true,
 	},
+
+	config = function(_, opts)
+		require("nvim-treesitter.configs").setup(opts)
+	end,
 }
