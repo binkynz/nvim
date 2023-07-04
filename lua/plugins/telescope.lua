@@ -24,11 +24,13 @@ return {
 		pickers = {
 			["find_files"] = {
 				theme = "ivy",
+				layout_config = { height = 0.5 },
 			},
 		},
 		extensions = {
 			["file_browser"] = {
 				theme = "ivy",
+				layout_config = { height = 0.5 },
 			},
 		},
 	},
