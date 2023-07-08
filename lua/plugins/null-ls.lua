@@ -24,6 +24,7 @@ return {
 				formatting.pg_format.with({
 					extra_args = { "--nogrouping" },
 				}),
+				formatting.rustfmt,
 			},
 
 			on_attach = function(client, bufnr)

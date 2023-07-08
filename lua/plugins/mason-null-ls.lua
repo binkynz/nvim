@@ -15,6 +15,7 @@ return {
 			"autopep8",
 			"gofumpt",
 			"goimports",
+			"rustfmt",
 		},
 
 		automatic_installation = true,

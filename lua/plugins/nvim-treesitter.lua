@@ -22,6 +22,7 @@ return {
 			"gosum",
 			"markdown",
 			"markdown_inline",
+			"rust",
 		},
 		auto_install = true,
 	},

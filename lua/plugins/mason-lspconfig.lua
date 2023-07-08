@@ -8,6 +8,7 @@ return {
 			"graphql",
 			"pylsp",
 			"tsserver",
+			"rust_analyzer",
 		},
 
 		automatic_installation = true,
