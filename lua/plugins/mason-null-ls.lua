@@ -16,6 +16,7 @@ return {
 			"gofumpt",
 			"goimports",
 			"rustfmt",
+			"golangci-lint",
 		},
 
 		automatic_installation = true,
