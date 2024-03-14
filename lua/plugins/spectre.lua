@@ -1,0 +1,24 @@
+return {
+	"nvim-pack/nvim-spectre",
+
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
+
+	keys = {
+		{
+			"<leader>S",
+			function()
+				require("spectre").toggle()
+			end,
+			desc = "Search",
+		},
+		{
+			"<leader>R",
+			function()
+				require("spectre.actions").run_replace()
+			end,
+			desc = "Replace",
+		},
+	},
+}
